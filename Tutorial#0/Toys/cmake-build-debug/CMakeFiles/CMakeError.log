@@ -1,0 +1,20 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /Users/shanthosh/Documents/SYDE223/Tutorial#0/Toys/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b048/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_4b048.dir/build.make CMakeFiles/cmTC_4b048.dir/build
+make[1]: *** No rule to make target `/Users/shanthosh/Documents/SYDE223/Tutorial', needed by `CMakeFiles/cmTC_4b048.dir/feature_tests.c.o'.  Stop.
+make: *** [cmTC_4b048/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /Users/shanthosh/Documents/SYDE223/Tutorial#0/Toys/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9bfd4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_9bfd4.dir/build.make CMakeFiles/cmTC_9bfd4.dir/build
+make[1]: *** No rule to make target `/Users/shanthosh/Documents/SYDE223/Tutorial', needed by `CMakeFiles/cmTC_9bfd4.dir/feature_tests.cxx.o'.  Stop.
+make: *** [cmTC_9bfd4/fast] Error 2
+
+
+
