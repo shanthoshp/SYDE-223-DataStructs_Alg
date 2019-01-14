@@ -5,12 +5,13 @@ using namespace std;
 #include <vector>
 
 class Artwork {
-    //PRIVATE ATTRIBUTES
+
+public:
+    //PUBLIC ATTRIBUTES
     unsigned int year;
     string artistName;
     string artName;
 
-public:
     //DEFAULT CONSTRUCTOR
     Artwork() {
         year = 0;
@@ -36,9 +37,9 @@ public:
     }
 
     //GETTER FUNCTIONS FOR TESTING
-    string getName() {
+    string getArtistName() {
         return artistName;
-    }
+    };
 };
 
 class SoldArtwork : public Artwork {
@@ -60,7 +61,11 @@ public:
         saleAmount = nSaleAmount;
         customerAddress = nCustomerAddress;
         customerName = nCustomerName;
-    }
+        year = newArt.year;
+        artistName = newArt.artistName;
+        artName = newArt.artName;
+    };
+
 
     //OVERLOADING OPERATOR
     bool operator==(const SoldArtwork& soldArt) {
@@ -89,7 +94,7 @@ public:
         }
 
         artInfo.push_back(art);
-        cout << "Artist Name: " << art.getName() << endl;
+        cout << "Artist Name: " << art.getArtistName() << endl;
         cout << "Inserted new Art -> Vector Size: " << artInfo.size() << endl;
         cout << "----------------------------------------- " << endl;
         return true;
@@ -99,14 +104,14 @@ public:
         bool checkArt = false;
 
         for (int i = 0; i < artInfo.size(); ++i) {
-            if (static_cast<Artwork>(sold) == artInfo[i]) { //static cast seems to be not working -> not returning true when suppose to
+            if (static_cast<Artwork>(sold) == artInfo[i]) {
                 artInfo.erase(artInfo.begin() + i);
                 cout << "Artwork removed from Art Vector -> Vector Size: " << artInfo.size() << endl;
                 checkArt = true;
             }
         }
 
-        if (!checkArt) { //for now made this statement true to test other functions
+        if (checkArt) {
             soldInfo.push_back(sold);
             cout << "Artwork Sold -> Sold Vector Size: " << soldInfo.size() << endl;
             cout << "----------------------------------------- " << endl;
@@ -138,7 +143,7 @@ public:
         if ((artInfo.size() == artCollect.artInfo.size()) && (soldInfo.size() ==  artCollect.soldInfo.size())) {
             for (int i = 0; i < artInfo.size(); ++i) {
                 for (int j = 0; j < artCollect.artInfo.size(); ++j){
-                    if ((artInfo[i] == artCollect.artInfo[j])) {
+                    if (artInfo[i] == artCollect.artInfo[j]) {
                         artInfoCounter++;
                         cout << artInfoCounter << " : " << artInfo.size() << endl;
                     }
@@ -147,7 +152,7 @@ public:
 
             for (int i = 0; i < soldInfo.size(); ++i) {
                 for (int j = 0; j < artCollect.soldInfo.size(); ++j){
-                    if ((soldInfo[i] == artCollect.soldInfo[j])) { //this overloading operator is broken -> always returning true;
+                    if (soldInfo[i] == artCollect.soldInfo[j]) {
                         soldInfoCounter++;
                         cout << soldInfoCounter << " : " << soldInfo.size() << endl;
                     }
@@ -212,27 +217,30 @@ int main() {
     ArtCollection test1;
     //Inserting
     test1.insert_artwork(art1);
+    test1.insert_artwork(art1);
     test1.insert_artwork(art2);
     test1.insert_artwork(art3);
-    //test1.insert_artwork(art3Copy);
+    test1.insert_artwork(art3Copy);
 
     //Selling
     test1.sell_artwork(soldArt1);
-    //test1.sell_artwork(soldArt1Copy);
-    //test1.sell_artwork(soldArt2);
+    test1.sell_artwork(soldArt1Copy);
+    test1.sell_artwork(soldArt2);
 
-    //== ArtCollection
+    //New ArtCollection
     ArtCollection test2;
     //Inserting
     test2.insert_artwork(art1);
     test2.insert_artwork(art2);
     test2.insert_artwork(art3);
-    //test2.insert_artwork(art3Copy);
+    test2.insert_artwork(art3Copy);
 
     //Selling
     test2.sell_artwork(soldArt2);
-    //test2.sell_artwork(soldArt1Copy);
-    //test2.sell_artwork(soldArt2);
+    test2.sell_artwork(soldArt1Copy);
+    test2.sell_artwork(soldArt2);
+
+    //Testing overloading + & ==
     test1 == test2;
     test1 + test2;
 
