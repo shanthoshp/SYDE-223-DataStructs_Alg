@@ -77,10 +77,6 @@ class ArtCollection {
     vector <Artwork> artInfo;
     vector <SoldArtwork> soldInfo;
 
-//    //SET CAPACITY
-//    artInfo.reserve(1000);
-//    soldInfo.reserve(1000);
-
 public:
     //SERVICE FUNCTIONS
     bool insert_artwork(Artwork& art){
@@ -103,14 +99,14 @@ public:
         bool checkArt = false;
 
         for (int i = 0; i < artInfo.size(); ++i) {
-            if (static_cast<Artwork>(sold) == artInfo[i]) { //static cast seems to be not working -> not returning true;
+            if (static_cast<Artwork>(sold) == artInfo[i]) { //static cast seems to be not working -> not returning true when suppose to
                 artInfo.erase(artInfo.begin() + i);
                 cout << "Artwork removed from Art Vector -> Vector Size: " << artInfo.size() << endl;
                 checkArt = true;
             }
         }
 
-        if (!checkArt) {
+        if (!checkArt) { //for now made this statement true to test other functions
             soldInfo.push_back(sold);
             cout << "Artwork Sold -> Sold Vector Size: " << soldInfo.size() << endl;
             cout << "----------------------------------------- " << endl;
@@ -151,7 +147,7 @@ public:
 
             for (int i = 0; i < soldInfo.size(); ++i) {
                 for (int j = 0; j < artCollect.soldInfo.size(); ++j){
-                    if ((soldInfo[i] == artCollect.soldInfo[j])) { //this overloading operator is broken
+                    if ((soldInfo[i] == artCollect.soldInfo[j])) { //this overloading operator is broken -> always returning true;
                         soldInfoCounter++;
                         cout << soldInfoCounter << " : " << soldInfo.size() << endl;
                     }
