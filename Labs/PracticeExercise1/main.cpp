@@ -77,59 +77,96 @@ class ArtCollection {
     vector <Artwork> artInfo;
     vector <SoldArtwork> soldInfo;
 
+//    //SET CAPACITY
+//    artInfo.reserve(1000);
+//    soldInfo.reserve(1000);
+
 public:
     //SERVICE FUNCTIONS
     bool insert_artwork(Artwork& art){
         for (int i = 0; i < artInfo.size(); ++i) {
             if (art == artInfo[i]) {
+                cout << "Duplicate Art Entry! Not added to vector" << endl;
+                cout << "----------------------------------------- " << endl;
                 return false;
             }
         }
 
         artInfo.push_back(art);
-        cout << art.getName() << endl;
-        cout << "Inserted new Art" << endl;
+        cout << "Artist Name: " << art.getName() << endl;
+        cout << "Inserted new Art -> Vector Size: " << artInfo.size() << endl;
+        cout << "----------------------------------------- " << endl;
         return true;
     }
 
     bool sell_artwork(SoldArtwork& sold){
+        bool checkArt = false;
+
         for (int i = 0; i < artInfo.size(); ++i) {
-            if (static_cast<Artwork>(sold) == artInfo[i]) {
+            if (static_cast<Artwork>(sold) == artInfo[i]) { //static cast seems to be not working -> not returning true;
                 artInfo.erase(artInfo.begin() + i);
+                cout << "Artwork removed from Art Vector -> Vector Size: " << artInfo.size() << endl;
+                checkArt = true;
             }
         }
 
-        soldInfo.push_back(sold);
-        cout << "Artwork Sold" << endl;
-        return true;
+        if (!checkArt) {
+            soldInfo.push_back(sold);
+            cout << "Artwork Sold -> Sold Vector Size: " << soldInfo.size() << endl;
+            cout << "----------------------------------------- " << endl;
+            return true;
+        }
+
+        cout << "Art is not apart of collection! Can not sell!" << endl;
+        return false;
+
     }
 
     //OVERLOADING OPERATOR
     bool operator==(const ArtCollection& artCollect) {
-        int counter = 0;
+        int artInfoCounter = 0;
+        int soldInfoCounter = 0;
+
+        cout << "////////////////////////////////////" << endl;
+        cout << "Current Collection Art Vector size: " << artInfo.size() << endl;
+        cout << "Current Collection Art Sold Vector size: " << soldInfo.size() << endl;
+        cout << "////////////////////////////////////" << endl;
+
+
+        cout << "////////////////////////////////////" << endl;
+        cout << "New Collection Art Vector size: " << artCollect.artInfo.size() << endl;
+        cout << "New Collection Art Sold Vector size: " << artCollect.soldInfo.size() << endl;
+        cout << "////////////////////////////////////" << endl;
+
 
         if ((artInfo.size() == artCollect.artInfo.size()) && (soldInfo.size() ==  artCollect.soldInfo.size())) {
             for (int i = 0; i < artInfo.size(); ++i) {
                 for (int j = 0; j < artCollect.artInfo.size(); ++j){
-                    if (!(artInfo[i] == artCollect.artInfo[j])) {
-                        cout << "Not the same" << endl;
-                        return false;
+                    if ((artInfo[i] == artCollect.artInfo[j])) {
+                        artInfoCounter++;
+                        cout << artInfoCounter << " : " << artInfo.size() << endl;
                     }
                 }
             }
 
             for (int i = 0; i < soldInfo.size(); ++i) {
                 for (int j = 0; j < artCollect.soldInfo.size(); ++j){
-                    if (!(soldInfo[i] == artCollect.soldInfo[j])) {
-                        cout << "Not the same" << endl;
-                        return false;
+                    if ((soldInfo[i] == artCollect.soldInfo[j])) { //this overloading operator is broken
+                        soldInfoCounter++;
+                        cout << soldInfoCounter << " : " << soldInfo.size() << endl;
                     }
                 }
             }
-            cout << "They are the same" << endl;
-            return true;
+
+            if ((artInfoCounter == artInfo.size() && soldInfoCounter == soldInfo.size())) {
+                cout << "They are the same collection" << endl;
+                return true;
+            }
+
+            cout << "Not the same collection" << endl;
+            return false;
         }
-        cout << "Not the same" << endl;
+        cout << "Not the same collection" << endl;
         return false;
     }
 
@@ -154,19 +191,53 @@ ArtCollection operator+(const ArtCollection& artCollect1, const ArtCollection& a
         nCollection.soldInfo.push_back(artCollect2.soldInfo[i]);
     }
 
-    cout << "New Collection Created" << endl;
+    cout << "////////////////////////////////////" << endl;
+    cout << "New Art Collection Created" << endl;
+    cout << "New Collection Art Vector Size : " << nCollection.artInfo.size() << endl;
+    cout << "New Collection Art Sold Vector Size : " << nCollection.soldInfo.size() << endl;
+    cout << "////////////////////////////////////" << endl;
+
     return nCollection;
 }
 
 int main() {
 
-    //QUICK TESTING 
-    Artwork art1(0, "Tosh", "yea");
-    Artwork art2(1233, "no", "yes");
-    SoldArtwork art3(art2, 23, "43 Ho", "syde");
+    //QUICK TESTING
+    Artwork art1(1999, "Art1", "SYDE223");
+    Artwork art2(2019, "Art2", "SYDE223");
+    Artwork art3(2019, "Art3", "SYDE223");
+    Artwork art3Copy(2019, "Art3", "SYDE223");
 
-    ArtCollection check;
-    check.insert_artwork(art2);
-    check.insert_artwork(art1);
+    SoldArtwork soldArt1(art1, 100, "Sold", "Sold");
+    SoldArtwork soldArt1Copy(art1, 100, "NA", "NA");
+    SoldArtwork soldArt2(art2, 100, "Sold", "Sold");
+
+
+    ArtCollection test1;
+    //Inserting
+    test1.insert_artwork(art1);
+    test1.insert_artwork(art2);
+    test1.insert_artwork(art3);
+    //test1.insert_artwork(art3Copy);
+
+    //Selling
+    test1.sell_artwork(soldArt1);
+    //test1.sell_artwork(soldArt1Copy);
+    //test1.sell_artwork(soldArt2);
+
+    //== ArtCollection
+    ArtCollection test2;
+    //Inserting
+    test2.insert_artwork(art1);
+    test2.insert_artwork(art2);
+    test2.insert_artwork(art3);
+    //test2.insert_artwork(art3Copy);
+
+    //Selling
+    test2.sell_artwork(soldArt2);
+    //test2.sell_artwork(soldArt1Copy);
+    //test2.sell_artwork(soldArt2);
+    test1 == test2;
+    test1 + test2;
 
 };
