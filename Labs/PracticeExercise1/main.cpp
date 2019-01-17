@@ -3,6 +3,7 @@ using namespace std;
 #include <stdlib.h>
 #include <string>
 #include <vector>
+#include <cassert>
 
 class Artwork {
 
@@ -122,6 +123,11 @@ public:
         return false;
 
     }
+    
+    vector <Artwork> getArtInfo(){  
+		return artInfo;
+	}
+    
 
     //OVERLOADING OPERATOR
     bool operator==(const ArtCollection& artCollect) {
@@ -201,14 +207,40 @@ ArtCollection operator+(const ArtCollection& artCollect1, const ArtCollection& a
     return nCollection;
 }
 
-int main() {
 
-    //QUICK TESTING
+void test_scenario1() { // test duplicate insert
     Artwork art1(1999, "Art1", "SYDE223");
     Artwork art2(2019, "Art2", "SYDE223");
     Artwork art3(2019, "Art3", "SYDE223");
     Artwork art3Copy(2019, "Art3", "SYDE223");
+    
+    ArtCollection test1;
+    //Inserting
+    test1.insert_artwork(art1);
+    test1.insert_artwork(art2);
+    test1.insert_artwork(art3);
+    
+	// example: use assertions to check function insert_artwork
+	assert(test1.getArtInfo().size() == 3);
+	    
+    test1.insert_artwork(art3Copy);
+	
+	assert(test1.getArtInfo().size() == 3);
 
+	cout<< "Test1 Passed: duplicate detected correctly" << endl;
+	
+	
+}
+
+int main() {
+	test_scenario1();
+
+   /* //QUICK TESTING
+    Artwork art1(1999, "Art1", "SYDE223");
+    Artwork art2(2019, "Art2", "SYDE223");
+    Artwork art3(2019, "Art3", "SYDE223");
+    Artwork art3Copy(2019, "Art3", "SYDE223");
+	
     SoldArtwork soldArt1(art1, 100, "Sold", "Sold");
     SoldArtwork soldArt1Copy(art1, 100, "NA", "NA");
     SoldArtwork soldArt2(art2, 100, "Sold", "Sold");
@@ -241,7 +273,9 @@ int main() {
     test2.sell_artwork(soldArt2);
 
     //Testing overloading + & ==
+    
     test1 == test2;
-    test1 + test2;
-
+    test1 + test2;*/
+    
 };
+
