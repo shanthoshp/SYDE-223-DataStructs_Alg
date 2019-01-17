@@ -215,20 +215,33 @@ void test_scenario1() { // test duplicate insert
     Artwork art3Copy(2019, "Art3", "SYDE223");
     
     ArtCollection test1;
-    //Inserting
+    
     test1.insert_artwork(art1);
     test1.insert_artwork(art2);
     test1.insert_artwork(art3);
     
-	// example: use assertions to check function insert_artwork
+	// TESTCASE 1: use assertions to check function insert_artwork
 	assert(test1.getArtInfo().size() == 3);
 	    
     test1.insert_artwork(art3Copy);
 	
 	assert(test1.getArtInfo().size() == 3);
 
-	cout<< "Test1 Passed: duplicate detected correctly" << endl;
+	cout<< "Test1 Passed: insert and duplicate works correctly" << endl;
 	
+	// TESTCASE 2: use assertions to check function sold_artwork
+    SoldArtwork soldArt1(art1, 100, "Sold", "Sold");
+    SoldArtwork soldArt1Copy(art1, 100, "NA", "NA");
+    SoldArtwork soldArt2(art2, 100, "Sold", "Sold");
+    
+    test1.sell_artwork(soldArt1);
+    test1.sell_artwork(soldArt1Copy);
+    test1.sell_artwork(soldArt2);
+	
+		
+	assert(test1.getArtInfo().size() == 1);
+
+	cout<< "Test2 Passed: sold 2/3 artworks correctly" << endl;
 	
 }
 
