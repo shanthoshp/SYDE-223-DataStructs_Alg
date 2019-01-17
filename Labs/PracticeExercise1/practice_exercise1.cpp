@@ -330,6 +330,5 @@ int main() {
 	test_sell_artwork();
 	test_sell_artwork_duplicate();
 	test_operators();
-
 };
 
