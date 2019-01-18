@@ -1,17 +1,30 @@
-#ifndef TIME_H
-#define TIME_H
+//
+// Created by Shanthosh Pushparajah on 2019-01-18.
+//
+
+#ifndef LAB_1_LAB1_POLYNOMIAL_H
+#define LAB_1_LAB1_POLYNOMIAL_H
 
 class Polynomial {
-	int* data;
-	int data_size;
-	
-	Polynomial(int A[], int size){
-		data = new int[size];
-	}
-	
-	~Polynomial(){
-		delete []data;
-	}
+
+    //PRIVATE ATTRIBUTES
+    int* data;
+    int data_size;
+
+    //DEFAULT CONSTRUCTOR
+    Polynomial(){}
+
+    //PARAMETRIC CONSTRUCTOR
+    Polynomial(int A[], int size){}
+
+    //PARAMETRIC CONSTRUCTOR
+    Polynomial(string fileName) {}
+
+    //DESTRUCTOR
+    ~Polynomial(){}
+
 };
- 
-#endif
+
+
+
+#endif //LAB_1_LAB1_POLYNOMIAL_H
