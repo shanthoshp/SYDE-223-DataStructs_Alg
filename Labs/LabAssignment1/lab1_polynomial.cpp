@@ -2,42 +2,64 @@
 using namespace std;
 #include <stdlib.h>
 #include <string>
-#include <random>
 #include <cassert>
-#include "lab1_polynomial.h" // header in local directory
+#include <random>
+#include <fstream>
 #include <iomanip>
+#include "lab1_polynomial.h" // header in local directory
 
-using namespace std;
 
-//DEFAULT CINSTRUCTOR
+
+//DEFAULT CONSTRUCTOR
 Polynomial :: Polynomial() {
+    random_device generator;
+    mt19937 type(generator());
+    uniform_int_distribution<> size(0, 1000);
+    uniform_int_distribution<> coefficients(-1000, 1000);
 
-    //<RANDOM>> Lib functions
-    default_random_engine generator;
-    uniform_int_distribution<int> size(0,1000);
-    uniform_int_distribution<int> coefficients(-1000,1000);
-    
+    data_size = size(type);
+
+    data.resize(data_size);
+
+    for (int i = 0; i < data_size; i++) {
+        data[i] = coefficients(type);
+    }
+}
+
+//2 ARGUMENT PARAMETRIC CONSTRUCTOR
+Polynomial :: Polynomial(int A[], int size) {
+    data_size = size;
+    data.resize(data_size);
+
+    for (int i = 0; i < data_size; i++) {
+        data[i] = A[i];
+    }
 
 }
 
-////PARAMETRIC
-//Polynomial :: Polynomial(int A[], int size) {
-//
-//}
+//1 ARGUMENT PARAMETRIC CONSTRUCTOR
+Polynomial :: Polynomial(string filename){
+    ifstream file;
+    file.open(filename);
 
-////PARAMETRIC
-//Polynomial :: Polynomial(string filepath): fileName(filepath)
-//{
-//
-//}
+    if(!file.is_open()) {
+        cout << "Error -> Cannot open file" << endl;
+    }
 
+    string getValue;
+    getline(file, getValue);
+    data_size = stoi(getValue);
 
-//
-////DESTRUCTOR
-//Polynomial::~Polynomial(void) {
-//
-//}
-//
+    while (getline(file, getValue)) {
+        if (getValue.size() > 0) {
+            data.push_back(stoi(getValue));
+        }
+    }
+}
+
+//DESTRUCTOR
+Polynomial :: ~Polynomial() {}
+
 //bool Polynomial::operator==(constPerson& target) const{
 //
 //    return boolean;
@@ -84,5 +106,5 @@ Polynomial :: Polynomial() {
 
 
 int main(){
-    
+    Polynomial();
 }

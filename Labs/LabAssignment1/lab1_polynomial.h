@@ -8,20 +8,40 @@
 class Polynomial {
 
     //PRIVATE ATTRIBUTES
-    int* data;
+    vector<int> data;
     int data_size;
 
+public:
+
     //DEFAULT CONSTRUCTOR
-    Polynomial(){}
+    Polynomial();
 
     //PARAMETRIC CONSTRUCTOR
-    Polynomial(int A[], int size){}
+    Polynomial(int A[], int size);
 
     //PARAMETRIC CONSTRUCTOR
-    Polynomial(string fileName) {}
+    Polynomial(string fileName);
 
     //DESTRUCTOR
-    ~Polynomial(){}
+    ~Polynomial();
+
+    //BOOL OVERLOADING
+    bool operator==(const Polynomial& target);
+
+    //ADDITION OPERATOR
+    bool operator+(const Polynomial& target);
+
+    //SUBTRACTION OPERATOR
+    bool operator-(const Polynomial& target);
+
+    //MULTIPLICATION OPERATOR
+    bool operator*(const Polynomial& target);
+
+    //DERIVATIVE
+    Polynomial derivative();
+
+    //PRINT
+    void print();
 
 };
 

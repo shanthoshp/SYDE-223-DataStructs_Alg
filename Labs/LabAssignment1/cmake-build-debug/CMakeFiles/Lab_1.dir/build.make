@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1"
+CMAKE_SOURCE_DIR = /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab_1.dir/depend.make
@@ -57,45 +57,30 @@ include CMakeFiles/Lab_1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab_1.dir/flags.make
 
-CMakeFiles/Lab_1.dir/main.cpp.o: CMakeFiles/Lab_1.dir/flags.make
-CMakeFiles/Lab_1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_1.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_1.dir/main.cpp.o -c "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/main.cpp"
-
-CMakeFiles/Lab_1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_1.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/main.cpp" > CMakeFiles/Lab_1.dir/main.cpp.i
-
-CMakeFiles/Lab_1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_1.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/main.cpp" -o CMakeFiles/Lab_1.dir/main.cpp.s
-
 CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o: CMakeFiles/Lab_1.dir/flags.make
 CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o: ../lab1_polynomial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o -c "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/lab1_polynomial.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o -c /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/lab1_polynomial.cpp
 
 CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/lab1_polynomial.cpp" > CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/lab1_polynomial.cpp > CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.i
 
 CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/lab1_polynomial.cpp" -o CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/lab1_polynomial.cpp -o CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.s
 
 # Object files for target Lab_1
 Lab_1_OBJECTS = \
-"CMakeFiles/Lab_1.dir/main.cpp.o" \
 "CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o"
 
 # External object files for target Lab_1
 Lab_1_EXTERNAL_OBJECTS =
 
-Lab_1: CMakeFiles/Lab_1.dir/main.cpp.o
 Lab_1: CMakeFiles/Lab_1.dir/lab1_polynomial.cpp.o
 Lab_1: CMakeFiles/Lab_1.dir/build.make
 Lab_1: CMakeFiles/Lab_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Lab_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Lab_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +93,6 @@ CMakeFiles/Lab_1.dir/clean:
 .PHONY : CMakeFiles/Lab_1.dir/clean
 
 CMakeFiles/Lab_1.dir/depend:
-	cd "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1" "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1" "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug" "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug" "/Users/shanthosh/Documents/SYDE223/Labs/Lab#1/cmake-build-debug/CMakeFiles/Lab_1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1 /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1 /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug /Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/cmake-build-debug/CMakeFiles/Lab_1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Lab_1.dir/depend
 
