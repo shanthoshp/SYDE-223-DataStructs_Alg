@@ -106,5 +106,7 @@ Polynomial :: ~Polynomial() {}
 
 
 int main(){
+    int q[] = {3,4,4};
     Polynomial();
+    Polynomial(q, 3);
 }
