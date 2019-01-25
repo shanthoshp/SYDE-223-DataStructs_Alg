@@ -40,18 +40,19 @@ Polynomial :: Polynomial(vector<int> A, int size) {
 Polynomial :: Polynomial(string filename){
     ifstream file;
     file.open(filename.c_str());
+    int poly_size = 0;
+    int i = 0;
 
     if(!file.is_open()) {
-        cout << "Error -> Cannot open file" << endl;
+        cout << strerror(errno) << " Error -> Cannot open file" << endl;
     } else {
-        string getValue;
-        getline(file, getValue);
-        data_size = stoi(getValue);
+        file >> poly_size;
+        poly_size = abs(poly_size);
+        data.resize(poly_size);
 
-        while (getline(file, getValue)) {
-            if (getValue.size() > 0) {
-                data.push_back(stoi(getValue));
-            }
+        while (!file.eof()) {
+            file >> data[i];
+            i++;
         }
     }
 }
@@ -219,5 +220,5 @@ int main(){
     s.derivative();
     s.print();
 
-    Polynomial("test.txt");
+    Polynomial("/Users/shanthosh/Documents/SYDE223/Labs/LabAssignment1/test.txt");
 }
