@@ -17,7 +17,7 @@ public:
     Polynomial();
 
     //PARAMETRIC CONSTRUCTOR
-    Polynomial(int A[], int size);
+    Polynomial(vector<int> A, int size);
 
     //PARAMETRIC CONSTRUCTOR
     Polynomial(string fileName);
@@ -25,17 +25,21 @@ public:
     //DESTRUCTOR
     ~Polynomial();
 
+    //HELPER METHODS
+    void makeVectorSizeSame(Polynomial& target);
+    void removeExtraZeros(Polynomial& target);
+
     //BOOL OVERLOADING
     bool operator==(const Polynomial& target);
 
     //ADDITION OPERATOR
-    bool operator+(const Polynomial& target);
+    Polynomial operator+(const Polynomial& target);
 
     //SUBTRACTION OPERATOR
-    bool operator-(const Polynomial& target);
+    Polynomial operator-(const Polynomial& target);
 
     //MULTIPLICATION OPERATOR
-    bool operator*(const Polynomial& target);
+    Polynomial operator*(const Polynomial& target);
 
     //DERIVATIVE
     Polynomial derivative();

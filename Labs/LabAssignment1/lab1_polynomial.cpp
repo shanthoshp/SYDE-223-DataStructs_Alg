@@ -27,32 +27,31 @@ Polynomial :: Polynomial() {
 }
 
 //2 ARGUMENT PARAMETRIC CONSTRUCTOR
-Polynomial :: Polynomial(int A[], int size) {
+Polynomial :: Polynomial(vector<int> A, int size) {
     data_size = size;
     data.resize(data_size);
 
     for (int i = 0; i < data_size; i++) {
         data[i] = A[i];
     }
-
 }
 
-//1 ARGUMENT PARAMETRIC CONSTRUCTOR
+//PARAMETRIC CONSTRUCTOR -> FILENAME
 Polynomial :: Polynomial(string filename){
     ifstream file;
-    file.open(filename);
+    file.open(filename.c_str());
 
     if(!file.is_open()) {
         cout << "Error -> Cannot open file" << endl;
-    }
+    } else {
+        string getValue;
+        getline(file, getValue);
+        data_size = stoi(getValue);
 
-    string getValue;
-    getline(file, getValue);
-    data_size = stoi(getValue);
-
-    while (getline(file, getValue)) {
-        if (getValue.size() > 0) {
-            data.push_back(stoi(getValue));
+        while (getline(file, getValue)) {
+            if (getValue.size() > 0) {
+                data.push_back(stoi(getValue));
+            }
         }
     }
 }
@@ -60,53 +59,165 @@ Polynomial :: Polynomial(string filename){
 //DESTRUCTOR
 Polynomial :: ~Polynomial() {}
 
-//bool Polynomial::operator==(constPerson& target) const{
-//
-//    return boolean;
-//}
-//
-////== OPERATOR OVERLOAD
-//bool Polynomial::operator==(constPerson& target) const{
-//
-//    return boolean;
-//}
-//
-////+ OPERATOR OVERLOAD
-//bool Polynomial::operator+(constPerson& target) const{
-//
-//    return boolean;
-//}
-//
-////- OPERATOR OVERLOAD
-//bool Polynomial::operator-(constPerson& target) const{
-//
-//    return boolean;
-//}
-//
-////* OPERATOR OVERLOAD
-//bool Polynomial::operator*(constPerson& target) const{
-//
-//    return boolean;
-//}
-//
-////PRINT METHOD
-//void Polynomial :: print() const
-//{
-//    cout << setw(2) << setfill('0') << hour << ":"
-//    << setw(2) << setfill('0') << minute << ":"
-//    << setw(2) << setfill('0') << second << "\n";
-//
-//}
-//
-////DERIVATIVE METHOD
-//void Polynomial :: derivative() const
-//{
-//
-//}
+//HELPER METHODS
+void Polynomial :: makeVectorSizeSame(Polynomial &target) {
+    int size = abs(data_size - target.data_size);
+
+    if (size > 0) {
+        for (int i = 0; i < size; i++) {
+            if (data_size < target.data_size) {
+                data.push_back(0);
+            } else if (target.data_size < data_size) {
+                target.data.push_back(0);
+            }
+        }
+    }
+
+    target.data_size = target.data.size();
+}
+
+void Polynomial :: removeExtraZeros(Polynomial &target) {
+    int size = abs(data_size - target.data_size);
+
+    if (size > 0) {
+        for (int i = 0; i < size; i++) {
+            if ((data_size > target.data_size) && (data[data_size - i - 1] == 0)) {
+                data.pop_back();
+            } else if ((target.data_size > data_size) && (target.data[target.data_size - i - 1] == 0)) {
+                target.data.pop_back();
+            }
+        }
+    }
+
+    target.data_size = target.data.size();
+}
+
+//== OPERATOR OVERLOAD
+bool Polynomial :: operator==(const Polynomial& target) {
+    int counter = 0;
+    Polynomial temp;
+    temp.data = target.data;
+    temp.data_size = temp.data_size;
+
+    removeExtraZeros(temp);
+
+    if (data.size() == temp.data.size()) {
+        for (int i = 0; i < data_size; i++) {
+            if (data[i] == temp.data[i]) {
+                counter++;
+            }
+        }
+    }
+
+    if (counter == data.size()) {
+        cout << "true" << endl;
+        return true;
+    } else {
+        cout << "false" << endl;
+        return false;
+    }
+}
+
+//+ OPERATOR OVERLOAD
+Polynomial Polynomial :: operator+(const Polynomial& target) {
+    Polynomial temp;
+    temp.data = target.data;
+    temp.data_size = temp.data_size;
+
+    makeVectorSizeSame(temp);
+
+    for (int i = 0; i < temp.data_size; i++) {
+        temp.data[i] += data[i];
+    }
+
+
+    return temp;
+}
+
+//- OPERATOR OVERLOAD
+Polynomial Polynomial :: operator-(const Polynomial& target) {
+    Polynomial temp;
+    temp.data = target.data;
+    temp.data_size = temp.data_size;
+
+    makeVectorSizeSame(temp);
+
+    for (int i = 0; i < temp.data_size; i++) {
+        temp.data[i] = data[i] - temp.data[i];
+    }
+
+
+    return temp;
+}
+
+//* OPERATOR OVERLOAD
+Polynomial Polynomial :: operator*(const Polynomial& target) {
+    Polynomial temp;
+    temp.data = target.data;
+    temp.data_size = target.data_size;
+
+    makeVectorSizeSame(temp);
+
+    vector<int> multiply(2 * temp.data_size, 0);
+
+    for (int i = 0; i < data.size(); i++) {
+        for (int j = 0; j < temp.data_size; j++) {
+            multiply[i+j] += (data[i] * temp.data[j]);
+        }
+    }
+
+    temp.data_size = multiply.size();
+    temp.data = multiply;
+
+    return temp;
+}
+
+//DERIVATIVE METHOD
+Polynomial Polynomial :: derivative() {
+    vector<int> derivative(data_size, 0);
+    for (int i = 1; i < data_size; i++) {
+        derivative[i - 1] = data[i] * i;
+    }
+
+    Polynomial temp;
+    temp.data = derivative;
+    temp.data_size = derivative.size();
+
+    return temp;
+}
+
+//PRINT METHOD
+void Polynomial :: print() {
+
+    for (int j = data_size - 1; j >= 0; j--) {
+        if (data[j] == 0) {
+            if (data[j - 1] != 0 && j != 0) {
+                cout << "+ ";
+            }
+        } else{
+            cout << data[j] << "x^" << j << " ";
+            if (data[j - 1] != 0 && j != 0) {
+                cout << "+ ";
+            }
+        }
+    }
+    cout << endl;
+}
 
 
 int main(){
-    int q[] = {3,4,4};
-    Polynomial();
-    Polynomial(q, 3);
+    vector<int> data1 = {1,2,4,3, 0, 0 ,0};
+    vector<int> data2 = {1,2,4,0,0};
+    vector<int> data3 = {0,0,2,0,1};
+    vector<int> data4 = {1,0,0,2, 5};
+    Polynomial t(data3, data3.size());
+    Polynomial s(data4, data4.size());
+    s.operator==(t);
+    s.operator+(t);
+    s.operator-(t);
+    s.operator*(t);
+    s.derivative();
+    s.print();
+
+    Polynomial("test.txt");
 }
