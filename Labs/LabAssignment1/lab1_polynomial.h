@@ -49,7 +49,7 @@ public:
 };
 
 
-class PolynomialTest{
+class PolynomialTest : public Polynomial{
 public:
     bool test_constructor1();
 
@@ -67,6 +67,9 @@ public:
 	bool test_derivative();
 	
 	bool test_print();
+	
+	void run();
+
 
 };
 

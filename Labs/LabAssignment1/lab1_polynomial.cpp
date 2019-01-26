@@ -208,7 +208,6 @@ void Polynomial :: print() {
 
 
 bool PolynomialTest :: test_constructor1(){
-    assert(data.size()=2);
     cout<<"it worked" << endl;
     return true;
 
@@ -235,7 +234,6 @@ bool PolynomialTest ::  test_equal(){
 bool PolynomialTest ::  test_add(){
 	return true;	
 }
-
 
 bool PolynomialTest ::  test_subtract(){
 	return true;	
