@@ -5,8 +5,7 @@
 #ifndef LAB_1_LAB1_POLYNOMIAL_H
 #define LAB_1_LAB1_POLYNOMIAL_H
 
-class Polynomial {
-
+class Polynomial{
     //PRIVATE ATTRIBUTES
     vector<int> data;
     int data_size;
@@ -25,6 +24,7 @@ public:
     //DESTRUCTOR
     ~Polynomial();
 
+ 
     //HELPER METHODS
     void makeVectorSizeSame(Polynomial& target);
     void removeExtraZeros(Polynomial& target);
@@ -49,6 +49,28 @@ public:
 
 };
 
+
+class PolynomialTest{
+ 
+public:
+    bool test_constructor1();
+
+    bool test_constructor2();
+
+    bool test_constructor3();
+ 
+    bool test_resize();
+    bool test_removal();
+
+	bool test_equal();
+	bool test_add();
+	bool test_subtract();
+	bool test multiply();
+	bool test_derivative();
+	
+	bool test_print();
+
+};
 
 
 #endif //LAB_1_LAB1_POLYNOMIAL_H

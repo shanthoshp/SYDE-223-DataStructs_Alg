@@ -9,7 +9,6 @@ using namespace std;
 #include "lab1_polynomial.h" // header in local directory
 
 
-
 //DEFAULT CONSTRUCTOR
 Polynomial :: Polynomial() {
     random_device generator;
@@ -58,6 +57,9 @@ Polynomial :: Polynomial(string filename){
 
 //DESTRUCTOR
 Polynomial :: ~Polynomial() {}
+
+
+
 
 //HELPER METHODS
 void Polynomial :: makeVectorSizeSame(Polynomial &target) {
@@ -205,6 +207,62 @@ void Polynomial :: print() {
 }
 
 
+bool PolynomialTest :: test_constructor1(){
+    cassert(data.size()=2);
+    cout<<"it worked" << endl;
+    return true;
+
+}
+bool PolynomialTest :: test_constructor2(){
+    return true;
+}
+
+bool PolynomialTest :: test_constructor3(){      
+	return true;
+}
+bool PolynomialTest ::  test_resize(){
+	return true;
+}
+
+bool PolynomialTest ::  test_removal(){
+	return true;	
+}
+
+bool PolynomialTest ::  test_equal(){
+	return true;	
+}
+
+bool PolynomialTest ::  test_add(){
+	return true;	
+}
+
+
+bool PolynomialTest ::  test_subtract(){
+	return true;	
+}
+
+
+bool PolynomialTest ::  test_multiply(){
+	return true;	
+}
+
+
+bool PolynomialTest ::  test_derivative(){
+	return true;	
+}
+
+bool PolynomialTest ::  test_print(){
+	return true;	
+}
+
+void PolynomialTest :: run(){
+    if(test_constructors1())
+    	cout << "Test Constructors1 Passed" << endl;
+	else
+		cout << "Test Constructors2 Failed" << endl;
+}
+
+
 int main(){
     vector<int> data1 = {1,2,4,3, 0, 0 ,0};
     vector<int> data2 = {1,2,4,0,0};
@@ -219,5 +277,6 @@ int main(){
     s.derivative();
     s.print();
 
-    Polynomial("test.txt");
+    Polynomial("polynomial.txt");
+
 }

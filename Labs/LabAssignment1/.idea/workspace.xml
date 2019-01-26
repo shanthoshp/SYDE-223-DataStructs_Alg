@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Lab_1" targetName="Lab_1" />
+      <config projectName="LabAssignment1" targetName="LabAssignment1" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,153 +11,28 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7da806bb-f4fb-46df-8f5b-28b4d71ce8f9" name="Default Changelist" comment="">
+    <list default="true" id="a031d1e7-b9dc-4a6a-bb13-d3876cecd5ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lab#1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab_1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab_1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab_1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab_1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab_1.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1_polynomial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_polynomial.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab1_polynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/lab1_polynomial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/.idea/PracticeProblem.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/Montonic Array Check.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/PracticeProblem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/PracticeProblem.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PracticeProblem/Montonic Array Check/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/.idea/Tutorial#0.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/CMakeFiles/untitled.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/untitled" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/cmake-build-debug/untitled.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/CurrencyAmountCDN/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/Toys.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/Tutorial_0.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/Tutorial_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/Tutorial_0.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tutorial#0/Toys/main.cpp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,29 +43,31 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab1_polynomial.h">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab1_polynomial.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="204">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab1_polynomial.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lab1_polynomial.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-              <folding>
-                <element signature="e#41#60#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>vector</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -203,35 +80,25 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Lab_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LabAssignment1" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -246,7 +113,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Lab_1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab_1" TARGET_NAME="Lab_1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab_1" RUN_TARGET_NAME="Lab_1">
+    <configuration name="LabAssignment1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LabAssignment1" TARGET_NAME="LabAssignment1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LabAssignment1" RUN_TARGET_NAME="LabAssignment1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -257,42 +124,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7da806bb-f4fb-46df-8f5b-28b4d71ce8f9" name="Default Changelist" comment="" />
-      <created>1547834227545</created>
+      <changelist id="a031d1e7-b9dc-4a6a-bb13-d3876cecd5ea" name="Default Changelist" comment="" />
+      <created>1548440511223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547834227545</updated>
-      <workItem from="1547834253942" duration="196000" />
-      <workItem from="1547834476459" duration="962000" />
-      <workItem from="1547835796612" duration="5349000" />
-      <workItem from="1548359163027" duration="15382000" />
-      <workItem from="1548434683612" duration="2765000" />
+      <updated>1548440511223</updated>
+      <workItem from="1548440515288" duration="35000" />
+      <workItem from="1548440579960" duration="3494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24654000" />
+    <option name="totallyTimeSpent" value="3529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23734939" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.3045326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -302,41 +165,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lab1_polynomial.cpp</url>
-          <line>40</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lab1_polynomial.cpp</url>
-          <line>41</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/../PracticeExercise1/practice_exercise1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="119" selection-start-line="119" selection-end-line="122" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lab1_polynomial.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab1_polynomial.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-          <folding>
-            <element signature="e#41#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>

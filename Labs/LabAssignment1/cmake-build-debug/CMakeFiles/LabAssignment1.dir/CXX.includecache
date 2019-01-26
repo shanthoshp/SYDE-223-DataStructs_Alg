@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tanjo/SYDE-223-DataStructs_Alg/Labs/LabAssignment1/lab1_polynomial.cpp
+iostream
+-
+stdlib.h
+-
+string
+-
+cassert
+-
+random
+-
+fstream
+-
+iomanip
+-
+lab1_polynomial.h
+C:/Users/tanjo/SYDE-223-DataStructs_Alg/Labs/LabAssignment1/lab1_polynomial.h
+
+C:/Users/tanjo/SYDE-223-DataStructs_Alg/Labs/LabAssignment1/lab1_polynomial.h
+
