@@ -208,7 +208,7 @@ void Polynomial :: print() {
 
 
 bool PolynomialTest :: test_constructor1(){
-    cassert(data.size()=2);
+    assert(data.size()=2);
     cout<<"it worked" << endl;
     return true;
 
@@ -256,10 +256,7 @@ bool PolynomialTest ::  test_print(){
 }
 
 void PolynomialTest :: run(){
-    if(test_constructors1())
-    	cout << "Test Constructors1 Passed" << endl;
-	else
-		cout << "Test Constructors2 Failed" << endl;
+	
 }
 
 

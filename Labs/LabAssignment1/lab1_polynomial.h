@@ -9,7 +9,6 @@ class Polynomial{
     //PRIVATE ATTRIBUTES
     vector<int> data;
     int data_size;
-
 public:
 
     //DEFAULT CONSTRUCTOR
@@ -51,7 +50,6 @@ public:
 
 
 class PolynomialTest{
- 
 public:
     bool test_constructor1();
 
@@ -65,7 +63,7 @@ public:
 	bool test_equal();
 	bool test_add();
 	bool test_subtract();
-	bool test multiply();
+	bool test_multiply();
 	bool test_derivative();
 	
 	bool test_print();
