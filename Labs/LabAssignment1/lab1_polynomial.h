@@ -23,6 +23,9 @@ public:
     //DESTRUCTOR
     ~Polynomial();
 
+	//GETTERS
+	vector<int> getData();
+	int getDataSize();
  
     //HELPER METHODS
     void makeVectorSizeSame(Polynomial& target);

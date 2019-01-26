@@ -58,7 +58,14 @@ Polynomial :: Polynomial(string filename){
 //DESTRUCTOR
 Polynomial :: ~Polynomial() {}
 
+//GETTERS
+vector<int> Polynomial :: getData(){
+	return data;
+}
 
+int Polynomial :: getDataSize(){
+	return data_size;
+}
 
 
 //HELPER METHODS
@@ -208,11 +215,11 @@ void Polynomial :: print() {
 
 
 bool PolynomialTest :: test_constructor1(){
-    cout<<"it worked" << endl;
-    return true;
 
 }
 bool PolynomialTest :: test_constructor2(){
+	assert(getData().size() == 2);
+    cout<<"it worked" << endl;
     return true;
 }
 
@@ -254,7 +261,10 @@ bool PolynomialTest ::  test_print(){
 }
 
 void PolynomialTest :: run(){
-	
+	cout << getDataSize() << endl;
+	if(test_constructor2()){
+		cout<<"YAY"<< endl;
+	}
 }
 
 
@@ -272,6 +282,9 @@ int main(){
     s.derivative();
     s.print();
 
-    Polynomial("polynomial.txt");
+   // Polynomial("polynomial.txt");
+    
+    PolynomialTest p;
+    p.run();
 
 }
