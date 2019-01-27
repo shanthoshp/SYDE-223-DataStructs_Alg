@@ -53,15 +53,18 @@ public:
 
 
 class PolynomialTest : public Polynomial{
+private:
+	vector<int> data1 = {1,2,4,3, 0, 0 ,0};
+    vector<int> data2 = {1,2,4,0,0};
+    vector<int> data3 = {0,0,2,0,1};
+    vector<int> data4 = {1,0,0,2,5};
+
 public:
     bool test_constructor1();
 
     bool test_constructor2();
 
     bool test_constructor3();
- 
-    bool test_resize();
-    bool test_removal();
 
 	bool test_equal();
 	bool test_add();

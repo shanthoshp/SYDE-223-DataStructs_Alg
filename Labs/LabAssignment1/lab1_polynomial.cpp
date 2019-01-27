@@ -1,11 +1,12 @@
 #include <iostream>
-using namespace std;
 #include <stdlib.h>
 #include <string>
 #include <cassert>
 #include <random>
 #include <fstream>
 #include <iomanip>
+#include <vector>
+using namespace std;
 #include "lab1_polynomial.h" // header in local directory
 
 
@@ -36,21 +37,23 @@ Polynomial :: Polynomial(vector<int> A, int size) {
 }
 
 //PARAMETRIC CONSTRUCTOR -> FILENAME
-Polynomial :: Polynomial(string filename){
+Polynomial :: Polynomial(string filename) {
     ifstream file;
     file.open(filename.c_str());
+    int poly_size = 0;
+    int i = 0;
 
-    if(!file.is_open()) {
-        cout << "Error -> Cannot open file" << endl;
+    if (!file.is_open()) {
+        cout << " Error -> Cannot open file" << endl;
     } else {
-        string getValue;
-        getline(file, getValue);
-        data_size = stoi(getValue);
+        file >> poly_size;
+        poly_size = abs(poly_size);
+        data_size = poly_size;
+        data.resize(data_size);
 
-        while (getline(file, getValue)) {
-            if (getValue.size() > 0) {
-                data.push_back(stoi(getValue));
-            }
+        while (!file.eof()) {
+            file >> data[i];
+            i++;
         }
     }
 }
@@ -66,7 +69,6 @@ vector<int> Polynomial :: getData(){
 int Polynomial :: getDataSize(){
 	return data_size;
 }
-
 
 //HELPER METHODS
 void Polynomial :: makeVectorSizeSame(Polynomial &target) {
@@ -215,48 +217,54 @@ void Polynomial :: print() {
 
 
 bool PolynomialTest :: test_constructor1(){
-
+	Polynomial poly1(data3, data3.size());
+	return true;
 }
-bool PolynomialTest :: test_constructor2(){
-	assert(getData().size() == 2);
-    cout<<"it worked" << endl;
+bool PolynomialTest :: test_constructor2(){ //default constructor testing
+	Polynomial poly1;
+	assert(getDataSize() <= 1000); // less than 1000 
+	for(int i = 0; i < getDataSize(); i++){
+		cout << "poly coeff" << poly1.getData()[i];
+		assert(poly1.getData()[i] > -1000 && poly1.getData()[i] < 1000); //in between -1000 to 1000 range for coefficients
+	}
     return true;
 }
 
-bool PolynomialTest :: test_constructor3(){      
-	return true;
-}
-bool PolynomialTest ::  test_resize(){
+bool PolynomialTest :: test_constructor3(){  
 	return true;
 }
 
-bool PolynomialTest ::  test_removal(){
-	return true;	
-}
 
-bool PolynomialTest ::  test_equal(){
+bool PolynomialTest :: test_equal(){
+	Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data4, data4.size());
 	return true;	
 }
 
 bool PolynomialTest ::  test_add(){
+  
 	return true;	
 }
 
 bool PolynomialTest ::  test_subtract(){
+	
 	return true;	
 }
 
 
 bool PolynomialTest ::  test_multiply(){
+	
 	return true;	
 }
 
 
 bool PolynomialTest ::  test_derivative(){
+	
 	return true;	
 }
 
 bool PolynomialTest ::  test_print(){
+	
 	return true;	
 }
 
@@ -269,20 +277,21 @@ void PolynomialTest :: run(){
 
 
 int main(){
-    vector<int> data1 = {1,2,4,3, 0, 0 ,0};
+	
+	/*vector<int> data1 = {1,2,4,3, 0, 0 ,0};
     vector<int> data2 = {1,2,4,0,0};
     vector<int> data3 = {0,0,2,0,1};
-    vector<int> data4 = {1,0,0,2, 5};
-    Polynomial t(data3, data3.size());
-    Polynomial s(data4, data4.size());
+    vector<int> data4 = {1,0,0,2,5};
+    Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data4, data4.size());
     s.operator==(t);
     s.operator+(t);
     s.operator-(t);
     s.operator*(t);
     s.derivative();
     s.print();
-
-   // Polynomial("polynomial.txt");
+*/
+    Polynomial("polynomial.txt");
     
     PolynomialTest p;
     p.run();
