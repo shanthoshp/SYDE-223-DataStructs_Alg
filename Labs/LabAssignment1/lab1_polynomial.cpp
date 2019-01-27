@@ -267,8 +267,8 @@ bool PolynomialTest ::  test_add(){
 bool PolynomialTest ::  test_subtract(){
 	Polynomial poly1(data3, data3.size());
     Polynomial poly2(data2, data2.size());
-    poly1 = poly1 + poly2;
-    assert(poly1.getData()[2] == 4); //Coefficient of 3rd degree subtraction should be 4
+    poly1 = poly1 - poly2;
+    assert(poly1.getData()[2] == -2); //Coefficient of 3rd degree subtraction should be 4
 	return true;	
 }
 
@@ -301,8 +301,10 @@ void PolynomialTest :: run(){
 	if(test_constructor3()) cout<<"Constructor 3 Tested"<< endl;
 	test_equal();
 	test_add();
+	test_subtract();
 	test_multiply();
 	test_derivative();
+	test_print();
 }
 
 
