@@ -112,7 +112,7 @@ bool Polynomial :: operator==(const Polynomial& target) {
     int counter = 0;
     Polynomial temp;
     temp.data = target.data;
-    temp.data_size = temp.data_size;
+    temp.data_size = target.data_size;
 
     removeExtraZeros(temp);
 
@@ -125,10 +125,8 @@ bool Polynomial :: operator==(const Polynomial& target) {
     }
 
     if (counter == data.size()) {
-        cout << "true" << endl;
         return true;
     } else {
-        cout << "false" << endl;
         return false;
     }
 }
@@ -137,7 +135,7 @@ bool Polynomial :: operator==(const Polynomial& target) {
 Polynomial Polynomial :: operator+(const Polynomial& target) {
     Polynomial temp;
     temp.data = target.data;
-    temp.data_size = temp.data_size;
+    temp.data_size = target.data_size;
 
     makeVectorSizeSame(temp);
 
@@ -153,7 +151,7 @@ Polynomial Polynomial :: operator+(const Polynomial& target) {
 Polynomial Polynomial :: operator-(const Polynomial& target) {
     Polynomial temp;
     temp.data = target.data;
-    temp.data_size = temp.data_size;
+    temp.data_size = target.data_size;
 
     makeVectorSizeSame(temp);
 
@@ -190,6 +188,7 @@ Polynomial Polynomial :: operator*(const Polynomial& target) {
 //DERIVATIVE METHOD
 Polynomial Polynomial :: derivative() {
     vector<int> derivative(data_size, 0);
+    
     for (int i = 1; i < data_size; i++) {
         derivative[i - 1] = data[i] * i;
     }
@@ -222,9 +221,12 @@ void Polynomial :: print() {
 
 bool PolynomialTest :: test_constructor1(){
 	Polynomial poly1(data3, data3.size());
+	assert(poly1.getDataSize() == 5 ); //5 elements should be in vector
 	return true;
 }
-bool PolynomialTest :: test_constructor2(){ //default constructor testing
+
+//default constructor testing
+bool PolynomialTest :: test_constructor2() { 
 	Polynomial poly1;
 	assert(getDataSize() <= 1000); // less than 1000 
 	for(int i = 0; i < getDataSize(); i++){
@@ -236,15 +238,18 @@ bool PolynomialTest :: test_constructor2(){ //default constructor testing
 bool PolynomialTest :: test_constructor3(){  
 	Polynomial poly1("polynomial.txt");
 	assert(poly1.getDataSize() == 3); //reading size from file
-	return true; 
+	return true;
 }
 
 
 bool PolynomialTest :: test_equal(){
-	Polynomial poly1(data3, data3.size());
-    Polynomial poly2(data4, data4.size());
- 	assert(poly1 == poly2);
-	return true;
+	Polynomial poly1(data5, data5.size());
+	Polynomial poly2(data7, data7.size());
+	Polynomial poly3(data1, data1.size());
+	Polynomial poly4(data2, data2.size());
+	assert(poly1 == poly2);
+	assert(poly3 == poly4);
+	return true;	
 }
 
 bool PolynomialTest ::  test_add(){
@@ -286,13 +291,9 @@ bool PolynomialTest ::  test_print(){
 }
 
 void PolynomialTest :: run(){
-	cout << getDataSize() << endl;
-	if(test_constructor1())
-		cout<<"Constructor 1 Tested"<< endl;
-	if(test_constructor2())
-		cout<<"Constructor 2 Tested"<< endl;
-	if(test_constructor3())
-		cout<<"Constructor 3 Tested"<< endl;
+	if(test_constructor1()) cout<<"Constructor 1 Tested"<< endl;
+	if(test_constructor2()) cout<<"Constructor 2 Tested"<< endl;
+	if(test_constructor3()) cout<<"Constructor 3 Tested"<< endl;
 	test_equal();
 	test_add();
 	test_multiply();
@@ -301,9 +302,7 @@ void PolynomialTest :: run(){
 
 
 int main(){
-	
-    Polynomial("polynomial.txt");
     PolynomialTest p;
     p.run();
-
 }
+

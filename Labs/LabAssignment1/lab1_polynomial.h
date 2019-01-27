@@ -60,6 +60,7 @@ private:
     vector<int> data4 = {1,0,0,2,5};
     vector<int> data5 = {3,2};
     vector<int> data6 = {3};
+    vector<int> data7 = {3,2};
 public:
     bool test_constructor1();
 
