@@ -236,19 +236,15 @@ bool PolynomialTest :: test_constructor2(){ //default constructor testing
 bool PolynomialTest :: test_constructor3(){  
 	Polynomial poly1("polynomial.txt");
 	assert(poly1.getDataSize() == 3); //reading size from file
-	return true;
+	return true; 
 }
 
 
 bool PolynomialTest :: test_equal(){
 	Polynomial poly1(data3, data3.size());
     Polynomial poly2(data4, data4.size());
-    for(int i = 0; i < getDataSize(); i++){
-    	    cout << poly1.getData()[i] << endl;
-
-    	//assert(poly1.getData()[i] == poly2.getData()[i]);
-	}
-	return true;	
+ 	assert(poly1 == poly2);
+	return true;
 }
 
 bool PolynomialTest ::  test_add(){
