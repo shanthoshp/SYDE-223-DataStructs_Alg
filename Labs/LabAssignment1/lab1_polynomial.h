@@ -55,7 +55,7 @@ public:
 class PolynomialTest : public Polynomial{
 private:
 	vector<int> data1 = {1,2,4,3, 0, 0 ,0};
-    vector<int> data2 = {1,2,4,0,0};
+    vector<int> data2 = {1,2,4,3,0};
     vector<int> data3 = {0,0,2,0,1};
     vector<int> data4 = {1,0,0,2,5};
     vector<int> data5 = {3,2};

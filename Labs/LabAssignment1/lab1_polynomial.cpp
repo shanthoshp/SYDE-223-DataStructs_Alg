@@ -28,11 +28,15 @@ Polynomial :: Polynomial() {
 
 //2 ARGUMENT PARAMETRIC CONSTRUCTOR
 Polynomial :: Polynomial(vector<int> A, int size) {
-    data_size = size;
-    data.resize(data_size);
-
-    for (int i = 0; i < data_size; i++) {
+    if (size <= 0 || A.size() == 0) {
+        data_size = 0;
+        data.resize(data_size);
+    } else {
+      data_size = size;
+      data.resize(data_size);
+      for (int i = 0; i < data_size; i++) {
         data[i] = A[i];
+      }
     }
 }
 
@@ -230,6 +234,8 @@ bool PolynomialTest :: test_constructor2(){ //default constructor testing
 }
 
 bool PolynomialTest :: test_constructor3(){  
+	Polynomial poly1("polynomial.txt");
+	assert(poly1.getDataSize() == 3); //reading size from file
 	return true;
 }
 
@@ -237,6 +243,11 @@ bool PolynomialTest :: test_constructor3(){
 bool PolynomialTest :: test_equal(){
 	Polynomial poly1(data3, data3.size());
     Polynomial poly2(data4, data4.size());
+    for(int i = 0; i < getDataSize(); i++){
+    	    cout << poly1.getData()[i] << endl;
+
+    	//assert(poly1.getData()[i] == poly2.getData()[i]);
+	}
 	return true;	
 }
 
@@ -269,12 +280,12 @@ bool PolynomialTest ::  test_multiply(){
 bool PolynomialTest ::  test_derivative(){
 	Polynomial poly1(data5, data5.size());
     poly1 = poly1.derivative();
-    poly1.print();
     assert(poly1.getData()[0] == 2); //test if derivative coefficient of now the constant place is 2.
 	return true;	
 }
 
 bool PolynomialTest ::  test_print(){
+	Polynomial poly1(data5, data5.size());
 	return true;	
 }
 
