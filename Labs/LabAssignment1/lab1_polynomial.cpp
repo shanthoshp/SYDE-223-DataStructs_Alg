@@ -224,7 +224,6 @@ bool PolynomialTest :: test_constructor2(){ //default constructor testing
 	Polynomial poly1;
 	assert(getDataSize() <= 1000); // less than 1000 
 	for(int i = 0; i < getDataSize(); i++){
-		cout << "poly coeff" << poly1.getData()[i];
 		assert(poly1.getData()[i] > -1000 && poly1.getData()[i] < 1000); //in between -1000 to 1000 range for coefficients
 	}
     return true;
@@ -242,57 +241,61 @@ bool PolynomialTest :: test_equal(){
 }
 
 bool PolynomialTest ::  test_add(){
-  
+  	Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data2, data2.size());
+    poly1 = poly1 + poly2;
+    assert(poly1.getData()[2] == 6); //Coefficient of 3rd degree addition should be 6
 	return true;	
 }
 
 bool PolynomialTest ::  test_subtract(){
-	
+	Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data2, data2.size());
+    poly1 = poly1 + poly2;
+    assert(poly1.getData()[2] == 4); //Coefficient of 3rd degree subtraction should be 4
 	return true;	
 }
 
 
 bool PolynomialTest ::  test_multiply(){
-	
+	Polynomial poly1(data5, data5.size());
+	Polynomial poly2(data6, data6.size());
+    poly1 = poly1 * poly2;
+    assert(poly1.getData()[0] == 9 ); //Coefficient of 3rd degree multiplication should be 9
 	return true;	
 }
 
 
 bool PolynomialTest ::  test_derivative(){
-	
+	Polynomial poly1(data5, data5.size());
+    poly1 = poly1.derivative();
+    poly1.print();
+    assert(poly1.getData()[0] == 2); //test if derivative coefficient of now the constant place is 2.
 	return true;	
 }
 
 bool PolynomialTest ::  test_print(){
-	
 	return true;	
 }
 
 void PolynomialTest :: run(){
 	cout << getDataSize() << endl;
-	if(test_constructor2()){
-		cout<<"YAY"<< endl;
-	}
+	if(test_constructor1())
+		cout<<"Constructor 1 Tested"<< endl;
+	if(test_constructor2())
+		cout<<"Constructor 2 Tested"<< endl;
+	if(test_constructor3())
+		cout<<"Constructor 3 Tested"<< endl;
+	test_equal();
+	test_add();
+	test_multiply();
+	test_derivative();
 }
 
 
 int main(){
 	
-	/*vector<int> data1 = {1,2,4,3, 0, 0 ,0};
-    vector<int> data2 = {1,2,4,0,0};
-    vector<int> data3 = {0,0,2,0,1};
-    vector<int> data4 = {1,0,0,2,5};
-    Polynomial poly1(data3, data3.size());
-    Polynomial poly2(data4, data4.size());
-    s.operator==(t);
-    s.operator+(t);
-    s.operator-(t);
-    s.operator*(t);
-    s.derivative();
-    s.print();
-*/
     Polynomial("polynomial.txt");
-    
     PolynomialTest p;
     p.run();
 

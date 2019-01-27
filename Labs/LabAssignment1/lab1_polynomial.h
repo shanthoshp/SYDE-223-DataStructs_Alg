@@ -58,7 +58,8 @@ private:
     vector<int> data2 = {1,2,4,0,0};
     vector<int> data3 = {0,0,2,0,1};
     vector<int> data4 = {1,0,0,2,5};
-
+    vector<int> data5 = {3,2};
+    vector<int> data6 = {3};
 public:
     bool test_constructor1();
 
