@@ -237,7 +237,11 @@ bool PolynomialTest :: test_constructor2() {
 
 bool PolynomialTest :: test_constructor3(){  
 	Polynomial poly1("polynomial.txt");
-	assert(poly1.getDataSize() == 3); //reading size from file
+	Polynomial poly2("corruptedPolynomial.txt");
+	
+	assert(poly1.getDataSize() == 3); //reading size from proper submitted data through textfile
+	assert(poly2.getData().size() == 3); //checking if corrupted data is submitted (size 4, and more or less inputs such ass only 2 inputs or 6 inputs)
+	poly2.print(); //printing to verify "0" coefficients are assigned to missing indicies if corrupted data.
 	return true;
 }
 
@@ -287,6 +291,7 @@ bool PolynomialTest ::  test_derivative(){
 
 bool PolynomialTest ::  test_print(){
 	Polynomial poly1(data5, data5.size());
+	poly1.print();
 	return true;	
 }
 
