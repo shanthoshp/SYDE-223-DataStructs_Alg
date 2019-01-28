@@ -1,3 +1,4 @@
+//SHANTHOSH PUSHPARJAH 20710273 && TANJOT PANESAR 20727567 
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -176,7 +177,7 @@ Polynomial Polynomial :: derivative() {
     vector<int> derivative(data_size, 0);
     
     for (int i = 1; i < data_size; i++) {
-        derivative[i - 1] = data[i];
+        derivative[i - 1] = data[i]*i;
     }
 
     Polynomial temp;
@@ -332,8 +333,9 @@ bool PolynomialTest ::  test_derivative(){
   polyDerv = polyDerv.derivative();
 
   assert(poly1.getData()[0] == 2); 
-  assert(polyDerv.getData()[1] == 734); 
-  assert(polyDerv.getData()[3] == 2); 
+  assert(polyDerv.getData()[1] == 1468); 
+  assert(polyDerv.getData()[2] == 192); 
+  assert(polyDerv.getData()[3] == 8); 
   assert(polyDerv.getData()[4] == 0); 
 	return true;	
 }
