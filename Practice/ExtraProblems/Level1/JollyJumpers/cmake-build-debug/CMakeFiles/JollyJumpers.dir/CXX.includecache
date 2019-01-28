@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shanthosh/Documents/SYDE223/Practice/ExtraProblems/Level1/JollyJumpers/main.cpp
+iostream
+-
+string
+-
+vector
+-
+

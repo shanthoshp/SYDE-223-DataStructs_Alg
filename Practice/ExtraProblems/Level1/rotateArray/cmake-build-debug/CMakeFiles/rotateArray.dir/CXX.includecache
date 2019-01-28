@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shanthosh/Documents/SYDE223/PracticeProblem/rotateArray/main.cpp
+iostream
+-
+string
+-
+vector
+-
+
