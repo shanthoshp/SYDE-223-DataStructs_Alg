@@ -2,7 +2,6 @@
 //SHANTHOSH PUSHPARJAH 20710273 && TANJOT PANESAR 20727567//
 ///////////////////////////////////////////////////////////
 
-
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -271,27 +270,27 @@ bool PolynomialTest :: test_equal(){
 }
 
 bool PolynomialTest ::  test_add(){
-      Polynomial poly1(data3, data3.size());
-      Polynomial poly2(data2, data2.size());
-      poly1 = poly1 + poly2;
+    Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data2, data2.size());
+    poly1 = poly1 + poly2;
 
-      Polynomial polyAdd1( new1, new1.size());
-      Polynomial polyAdd2(new2, new2.size());
-      polyAdd1 = polyAdd1 + polyAdd2;
+    Polynomial polyAdd1( new1, new1.size());
+    Polynomial polyAdd2(new2, new2.size());
+    polyAdd1 = polyAdd1 + polyAdd2;
 
-      Polynomial polyAdd3(multi1, multi1.size());
-      Polynomial polyAdd4(multi2, multi2.size());
-      polyAdd3 = polyAdd3 + polyAdd4;
+    Polynomial polyAdd3(multi1, multi1.size());
+    Polynomial polyAdd4(multi2, multi2.size());
+    polyAdd3 = polyAdd3 + polyAdd4;
 
-      assert(poly1.getData()[2] == 6);
-      assert(polyAdd1.getData()[0] == 50);
-      assert(polyAdd1.getData()[2] == 741);
-      assert(polyAdd3.getData()[1] == 20);
+    assert(poly1.getData()[2] == 6);
+    assert(polyAdd1.getData()[0] == 50);
+    assert(polyAdd1.getData()[2] == 741);
+    assert(polyAdd3.getData()[1] == 20);
 	return true;	
 }
 
 bool PolynomialTest ::  test_subtract(){
-	Polynomial poly1(data3, data3.size());
+    Polynomial poly1(data3, data3.size());
     Polynomial poly2(data2, data2.size());
     poly1 = poly1 - poly2;
 
@@ -330,18 +329,18 @@ bool PolynomialTest ::  test_multiply(){
 
 
 bool PolynomialTest ::  test_derivative(){
-  Polynomial poly1(data2, data2.size());
-  poly1 = poly1.derivative();
+    Polynomial poly1(data2, data2.size());
+    poly1 = poly1.derivative();
 
-  Polynomial polyDerv(new2, new2.size());
-  polyDerv = polyDerv.derivative();
+    Polynomial polyDerv(new2, new2.size());
+    polyDerv = polyDerv.derivative();
 
-  assert(poly1.getData()[0] == 2); 
-  assert(polyDerv.getData()[1] == 1468); 
-  assert(polyDerv.getData()[2] == 192); 
-  assert(polyDerv.getData()[3] == 8); 
-  assert(polyDerv.getData()[4] == 0); 
-  return true;	
+    assert(poly1.getData()[0] == 2);
+    assert(polyDerv.getData()[1] == 1468);
+    assert(polyDerv.getData()[2] == 192);
+    assert(polyDerv.getData()[3] == 8);
+    assert(polyDerv.getData()[4] == 0);
+    return true;
 }
 
 bool PolynomialTest ::  test_print(){
