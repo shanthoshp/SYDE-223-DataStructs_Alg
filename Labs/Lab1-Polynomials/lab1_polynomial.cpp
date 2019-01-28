@@ -330,7 +330,7 @@ bool PolynomialTest ::  test_multiply(){
 
 
 bool PolynomialTest ::  test_derivative(){
-  Polynomial poly1(data5, data5.size());
+  Polynomial poly1(data2, data2.size());
   poly1 = poly1.derivative();
 
   Polynomial polyDerv(new2, new2.size());
@@ -341,7 +341,7 @@ bool PolynomialTest ::  test_derivative(){
   assert(polyDerv.getData()[2] == 192); 
   assert(polyDerv.getData()[3] == 8); 
   assert(polyDerv.getData()[4] == 0); 
-	return true;	
+  return true;	
 }
 
 bool PolynomialTest ::  test_print(){
