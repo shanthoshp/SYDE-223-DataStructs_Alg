@@ -5,8 +5,6 @@ using namespace std;
 #include <vector>
 #include <cassert>
 
-//SYDE 223 - PracticeExercise1 - Shanthosh Pushparajah & Tanjot Panesar
-
 class Artwork {
 
 public:
