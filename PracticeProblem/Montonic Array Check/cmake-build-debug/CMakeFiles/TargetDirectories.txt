@@ -1,3 +1,0 @@
-/Users/shanthosh/Documents/SYDE223/PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/shanthosh/Documents/SYDE223/PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/shanthosh/Documents/SYDE223/PracticeProblem/Montonic Array Check/cmake-build-debug/CMakeFiles/PracticeProblem.dir
