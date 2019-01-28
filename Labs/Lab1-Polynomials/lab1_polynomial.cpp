@@ -1,4 +1,8 @@
-//SHANTHOSH PUSHPARJAH 20710273 && TANJOT PANESAR 20727567 
+/////////////////////////////////////////////////////////////
+//SHANTHOSH PUSHPARJAH 20710273 && TANJOT PANESAR 20727567//
+///////////////////////////////////////////////////////////
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -209,18 +213,18 @@ void Polynomial :: print() {
 
 //2 ARGUMENT PARAMETRIC CONSTRUCTOR TEST
 bool PolynomialTest :: test_constructor1(){
-	Polynomial poly1(data3, data3.size());
-  Polynomial poly2(data3, -4);
-  Polynomial poly3(data3, 0);
-  Polynomial poly4(data3, -3);
+    Polynomial poly1(data3, data3.size());
+    Polynomial poly2(data3, -4);
+    Polynomial poly3(data3, 0);
+    Polynomial poly4(data3, -3);
 
-	assert(poly1.getDataSize() == 5 );
-  assert(poly2.getDataSize() == 4); 
-  assert((poly2.getData()[0] == 0));
-  assert((poly3.getData()[0] == 0));
-  assert(poly3.getDataSize() == 1);
-  assert(poly4.getDataSize() == 3);
-  assert((poly4.getData()[2] == 2));  
+    assert(poly1.getDataSize() == 5 );
+    assert(poly2.getDataSize() == 4);
+    assert((poly2.getData()[0] == 0));
+    assert((poly3.getData()[0] == 0));
+    assert(poly3.getDataSize() == 1);
+    assert(poly4.getDataSize() == 3);
+    assert((poly4.getData()[2] == 2));
 
 	return true;
 }
@@ -252,57 +256,57 @@ bool PolynomialTest :: test_equal(){
 	Polynomial poly3(data1, data1.size());
 	Polynomial poly4(data2, data2.size());
 
-  Polynomial polySame1(same1, same1.size());
-  Polynomial polySame2(same2, same2.size());
-  Polynomial polySame3(same3, same3.size());
+    Polynomial polySame1(same1, same1.size());
+    Polynomial polySame2(same2, same2.size());
+    Polynomial polySame3(same3, same3.size());
 
 	assert(poly1 == poly2);
 	assert(poly3 == poly4);
-  assert(polySame1 == polySame2);
-  assert(polySame1 == polySame1);
-  assert(!(polySame1 == polySame3));
-  assert(!(polySame3 == polySame2));
-  assert(!(polySame2 == polySame3));
+    assert(polySame1 == polySame2);
+    assert(polySame1 == polySame1);
+    assert(!(polySame1 == polySame3));
+    assert(!(polySame3 == polySame2));
+    assert(!(polySame2 == polySame3));
 	return true;	
 }
 
 bool PolynomialTest ::  test_add(){
-  Polynomial poly1(data3, data3.size());
-  Polynomial poly2(data2, data2.size());
-  poly1 = poly1 + poly2;
+      Polynomial poly1(data3, data3.size());
+      Polynomial poly2(data2, data2.size());
+      poly1 = poly1 + poly2;
 
-  Polynomial polyAdd1( new1, new1.size());
-  Polynomial polyAdd2(new2, new2.size());
-  polyAdd1 = polyAdd1 + polyAdd2;
+      Polynomial polyAdd1( new1, new1.size());
+      Polynomial polyAdd2(new2, new2.size());
+      polyAdd1 = polyAdd1 + polyAdd2;
 
-  Polynomial polyAdd3(multi1, multi1.size());
-  Polynomial polyAdd4(multi2, multi2.size());
-  polyAdd3 = polyAdd3 + polyAdd4;
+      Polynomial polyAdd3(multi1, multi1.size());
+      Polynomial polyAdd4(multi2, multi2.size());
+      polyAdd3 = polyAdd3 + polyAdd4;
 
-  assert(poly1.getData()[2] == 6); 
-  assert(polyAdd1.getData()[0] == 50);
-  assert(polyAdd1.getData()[2] == 741);
-  assert(polyAdd3.getData()[1] == 20);
+      assert(poly1.getData()[2] == 6);
+      assert(polyAdd1.getData()[0] == 50);
+      assert(polyAdd1.getData()[2] == 741);
+      assert(polyAdd3.getData()[1] == 20);
 	return true;	
 }
 
 bool PolynomialTest ::  test_subtract(){
 	Polynomial poly1(data3, data3.size());
-  Polynomial poly2(data2, data2.size());
-  poly1 = poly1 - poly2;
+    Polynomial poly2(data2, data2.size());
+    poly1 = poly1 - poly2;
 
-  Polynomial polySub1(new1, new1.size());
-  Polynomial polySub2(new2, new2.size());
-  polySub1 = polySub1 - polySub2;
+    Polynomial polySub1(new1, new1.size());
+    Polynomial polySub2(new2, new2.size());
+    polySub1 = polySub1 - polySub2;
 
-  Polynomial polySub3(multi1, multi1.size());
-  Polynomial polySub4(multi2, multi2.size());
-  polySub3 = polySub3 - polySub4;
+    Polynomial polySub3(multi1, multi1.size());
+    Polynomial polySub4(multi2, multi2.size());
+    polySub3 = polySub3 - polySub4;
 
-  assert(poly1.getData()[2] == -2); 
-  assert(polySub1.getData()[0] == -40);
-  assert(polySub1.getData()[6] == 7);
-  assert(polySub3.getData()[1] == -26);
+    assert(poly1.getData()[2] == -2);
+    assert(polySub1.getData()[0] == -40);
+    assert(polySub1.getData()[6] == 7);
+    assert(polySub3.getData()[1] == -26);
 	return true;	
 }
 
@@ -310,23 +314,23 @@ bool PolynomialTest ::  test_subtract(){
 bool PolynomialTest ::  test_multiply(){
 	Polynomial poly1(data5, data5.size());
 	Polynomial poly2(data6, data6.size());
-  poly1 = poly1 * poly2;
+    poly1 = poly1 * poly2;
 
-  Polynomial polyMulti1(multi1, multi1.size());
-  Polynomial polyMulti2(multi2, multi2.size());
-  polyMulti1 = polyMulti1 * polyMulti2;
+    Polynomial polyMulti1(multi1, multi1.size());
+    Polynomial polyMulti2(multi2, multi2.size());
+    polyMulti1 = polyMulti1 * polyMulti2;
 
-  assert(poly1.getData()[0] == 9 );
-  assert(polyMulti1.getData()[0] == 45);
-  assert(polyMulti1.getData()[5] == 277);
-  assert(polyMulti1.getData()[6] == -114);
-  assert(polyMulti1.getData()[7] == 48);
+    assert(poly1.getData()[0] == 9 );
+    assert(polyMulti1.getData()[0] == 45);
+    assert(polyMulti1.getData()[5] == 277);
+    assert(polyMulti1.getData()[6] == -114);
+    assert(polyMulti1.getData()[7] == 48);
 	return true;	
 }
 
 
 bool PolynomialTest ::  test_derivative(){
-	Polynomial poly1(data5, data5.size());
+  Polynomial poly1(data5, data5.size());
   poly1 = poly1.derivative();
 
   Polynomial polyDerv(new2, new2.size());
@@ -351,12 +355,12 @@ void PolynomialTest :: run(){
 	if(test_constructor1()) cout<<"Constructor 1 Pass"<< endl;
 	if(test_constructor2()) cout<<"Constructor 2 Pass"<< endl;
 	if(test_constructor3()) cout<<"Constructor 3 Pass"<< endl;
-  if(test_equal()) cout<<"Equal Pass"<< endl;
+    if(test_equal()) cout<<"Equal Pass"<< endl;
 	if(test_add()) cout<<"Add Pass"<< endl;
-  if(test_subtract()) cout<<"Subtract Pass"<< endl;
-  if(test_multiply()) cout<<"Multiply Pass"<< endl;
-  if(test_derivative()) cout<<"Derivative Pass"<< endl;
-  cout << "Example print: " << test_print() << endl;
+    if(test_subtract()) cout<<"Subtract Pass"<< endl;
+    if(test_multiply()) cout<<"Multiply Pass"<< endl;
+    if(test_derivative()) cout<<"Derivative Pass"<< endl;
+    cout << "Example print: " << test_print() << endl;
 }
 
 
