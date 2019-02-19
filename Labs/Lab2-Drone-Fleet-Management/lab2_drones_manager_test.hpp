@@ -219,8 +219,8 @@ public:
     ASSERT_TRUE(manager.get_size() == 13)
 
     ASSERT_TRUE(manager.insert(DronesManager::DroneRecord(100), 12))
-    ASSERT_TRUE(*manager.last  == DronesManager::DroneRecord(100))
-    ASSERT_TRUE(*manager.last -> prev  == DronesManager::DroneRecord(7))
+    ASSERT_TRUE(*manager.last  == DronesManager::DroneRecord(7))
+    ASSERT_TRUE(*manager.last -> prev  == DronesManager::DroneRecord(100))
 
 	  return true;
 	}

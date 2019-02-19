@@ -1,4 +1,4 @@
-//NAME: SHANTHOSH PUSHPARJAH (20710273) && TANJOT PANESAR(20727567)
+//NAME: SHANTHOSH PUSHPARAJAH (20710273) && TANJOT PANESAR(20727567)
 //DATE: 02/19/2019
 
 #include "lab2_drones_manager.hpp"
@@ -101,7 +101,7 @@ bool DronesManager::insert(DroneRecord value, unsigned int index) {
 	 DroneRecord* node = new DroneRecord(value);
    DroneRecord* temp = first;
 
-  if (index >= size) {
+  if (index > size) {
     return false;
   }
 
@@ -110,8 +110,6 @@ bool DronesManager::insert(DroneRecord value, unsigned int index) {
     last = node;
   } else if (index == 0) {
     insert_front(value);
-  } else if (index == size - 1) {
-    insert_back(value);
   } else {
     for (int i = 0; i < index - 1; ++i) {
       temp = temp -> next;
@@ -137,7 +135,6 @@ bool DronesManager::insert_front(DroneRecord value) {
     first -> prev = node;
     first = node;
   }
-
 
   size++;
 	return true;
@@ -233,7 +230,7 @@ bool DronesManager::replace(unsigned int index, DroneRecord value) {
   DroneRecord* node = new DroneRecord(value);
   DroneRecord* temp = first;
 
- if (index >= size || first == NULL) {
+ if (index > size || first == NULL) {
     return false;
   }
 
@@ -341,7 +338,11 @@ bool DronesManagerSorted::insert_sorted_asc(DroneRecord val) {
     index++;
   }     
 
+ if (index == size - 1) {
+    insert_back(val);
+ } else {
   insert(val, index);
+ }
  
   return true;
 }
@@ -366,8 +367,12 @@ bool DronesManagerSorted::insert_sorted_desc(DroneRecord val) {
     temp = temp -> next;
     index++;
   }     
-
-  insert(val, index);
+   
+  if (index == size - 1) {
+    insert_back(val);
+  } else {
+    insert(val, index);
+ }
 
   return true;
 }
