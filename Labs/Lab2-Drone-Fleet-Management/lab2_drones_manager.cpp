@@ -91,7 +91,7 @@ unsigned int DronesManager::search(DroneRecord value) const {
 void DronesManager::print() const {
     DroneRecord* temp = first;
     for (int i = 0; i < size; i++) {
-      cout << "index " << i << ": " << "id: " << temp -> droneID << " range: " << temp -> range << " yearBought: " << temp -> yearBought << " droneType: " << temp -> droneType << " manufacturer: " << temp -> manufacturer << " description: " << temp -> description << " batteryType: " << temp -> batteryType << endl;
+      cout << "index " << i << ": " << "Drone ID: " << temp -> droneID << " range: " << temp -> range << " yearBought: " << temp -> yearBought << " droneType: " << temp -> droneType << " manufacturer: " << temp -> manufacturer << " description: " << temp -> description << " batteryType: " << temp -> batteryType << endl;
 
       temp = temp -> next;
     }
@@ -321,28 +321,26 @@ bool DronesManagerSorted::insert_sorted_asc(DroneRecord val) {
   DroneRecord* temp = first;
   unsigned int index = 0;
 
-  if (!is_sorted_asc() || first == NULL) {
+  if (!is_sorted_asc()) {
     return false;
   } 
 
-  if (first -> next == NULL && first != NULL) {
-    if (temp -> droneID < val.droneID) {
-      insert_back(val);
-    } else {
-      insert_front(val);
-    }
-  }
-
-  while(temp -> next != NULL && (temp -> droneID < val.droneID)) {
-    temp = temp -> next;
-    index++;
-  }     
-
- if (index == size - 1) {
+  if (first == NULL) {
+    insert_front(val);
+  } else if (val.droneID < first -> droneID) {
+    insert_front(val);
+  } else if (val.droneID > last -> droneID) {
     insert_back(val);
- } else {
-  insert(val, index);
- }
+  } else {
+
+    while(temp -> next != NULL && (temp -> droneID < val.droneID)) {
+      temp = temp -> next;
+      index++;
+    }     
+
+    insert(val, index);
+
+  }
  
   return true;
 }
@@ -351,28 +349,25 @@ bool DronesManagerSorted::insert_sorted_desc(DroneRecord val) {
 	DroneRecord* temp = first;
   unsigned int index = 0;
 
-  if (!is_sorted_desc() || first == NULL) {
+  if (!is_sorted_desc()) {
     return false;
   } 
 
-  if (first -> next == NULL && first != NULL) {
-    if (temp -> droneID > val.droneID) {
-      insert_back(val);
-    } else {
-      insert_front(val);
-    }
-  }
-
-  while(temp -> next != NULL && (temp -> droneID > val.droneID)) {
-    temp = temp -> next;
-    index++;
-  }     
-   
-  if (index == size - 1) {
+  if (first == NULL) {
+    insert_front(val);
+  } else if (val.droneID > first -> droneID) {
+    insert_front(val);
+  } else if (val.droneID < last -> droneID) {
     insert_back(val);
-  } else {
+  } else {  
+
+    while(temp -> next != NULL && (temp -> droneID > val.droneID)) {
+      temp = temp -> next;
+      index++;
+    }     
+
     insert(val, index);
- }
+  }
 
   return true;
 }
